@@ -9,7 +9,7 @@ const projects = () => {
   return (
     <div>
       <Wrapper>
-        <div className="my-10 mx-20 space-y-16 font-inter">
+        <div className="my-10 pb-20 mx-20 space-y-16 font-inter">
           <div className="text-9xl font-bold">
             SELECTED WORK <br />
             (2021 - 2023)
@@ -25,7 +25,7 @@ const projects = () => {
 
         {/* works */}
         {works?.map((item, index) => (
-          <div className="mt-40 mx-20">
+          <div className="mb-20 mx-20">
             <div className="w-full relative">
               <Image
                 className="object-cover h-[500px] rounded-xl w-full"
