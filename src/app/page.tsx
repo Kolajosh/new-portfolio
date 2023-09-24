@@ -7,6 +7,7 @@ import Wrapper from "@/components/Wrapper";
 import { works } from "../app/projects/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   const [randomItem, setRandomItem] = useState<{
@@ -31,6 +32,7 @@ export default function Home() {
 
   return (
     <>
+      <Analytics />
       <Wrapper>
         <div className="my-10 mx-10 md:mx-20 space-y-10 font-inter">
           <motion.div
