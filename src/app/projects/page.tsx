@@ -1,7 +1,10 @@
+"use client";
+
 import Wrapper from "@/components/Wrapper";
 import anime from "../../assets/imgs/anime-log-new.jpeg";
 import { works } from "../projects/constants";
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,17 +13,29 @@ const projects = () => {
     <div>
       <Wrapper>
         <div className="my-10 pb-20 mx-10 md:mx-20 space-y-10 font-inter">
-          <div className="text-4xl leading-none md:text-9xl font-bold">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -50 }}
+            transition={{ duration: 1 }}
+            className="text-4xl leading-none md:text-9xl font-bold"
+          >
             SELECTED WORK <br />
             (2021 - 2023)
-          </div>
-          <div className="text-2xl md:text-5xl leading-none font-medium">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-2xl md:text-5xl leading-none font-medium"
+          >
             Preview some of the Web2.0
             <br />
             and Web3.0 projects i have
             <br />
             worked on.
-          </div>
+          </motion.div>
         </div>
 
         {/* works */}

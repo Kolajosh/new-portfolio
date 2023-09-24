@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 interface IWrapperProps {
   children: any;
@@ -8,8 +9,11 @@ interface IWrapperProps {
 const Wrapper = ({ children }: IWrapperProps) => {
   return (
     <div>
-      <Navbar />
+      <div id="navbar">
+        <Navbar />
+      </div>
       {children}
+      <Footer />
     </div>
   );
 };
