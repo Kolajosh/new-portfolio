@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="mt-10 mx-10 md:mx-20 text-xl font-semibold font-inter">
-      <div className="text-4xl text-center md:text-left leading-none md:text-9xl font-bold">
+      <div className="text-4xl text-center md:text-left leading-none md:text-7xl font-bold">
         KOLAWOLE AYOOLA <br />
         WEB ENGINEER
       </div>

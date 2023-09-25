@@ -36,7 +36,7 @@ export default function Home() {
       <Wrapper>
         <div className="my-10 mx-10 md:mx-20 space-y-10 font-inter">
           <motion.div
-            className="text-4xl leading-none md:text-9xl font-bold"
+            className="text-4xl leading-none md:text-7xl font-bold"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
@@ -50,7 +50,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-2xl md:text-5xl leading-none font-medium"
+            className="text-2xl md:text-4xl leading-none font-medium"
           >
             Crafting User Interfaces & Transforming Web Landscapes. I help
             companies around the world bring their vision to life with

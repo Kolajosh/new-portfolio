@@ -22,7 +22,7 @@ const about = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 1 }}
-            className="text-4xl leading-none md:text-9xl font-bold"
+            className="text-4xl leading-none md:text-7xl font-bold"
           >
             WEB, ANIME <br />& NETWORKING
           </motion.div>
@@ -31,7 +31,7 @@ const about = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="text-2xl md:text-5xl leading-none font-medium"
+            className="text-2xl md:text-4xl leading-none font-medium"
           >
             Enter my domain, where I embrace the realms of emerging web
             technologies. Discover my services, approach, and what captivates
@@ -65,7 +65,7 @@ const about = () => {
           className="my-40 mb-10 mx-10 md:mx-20 font-inter"
         >
           <div className="flex flex-col gap-5 md:flex-row justify-between items-center">
-            <div className="text-4xl leading-none md:text-9xl font-bold">
+            <div className="text-4xl leading-none md:text-7xl font-bold">
               SERVICES
             </div>
             <div>

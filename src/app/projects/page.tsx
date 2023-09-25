@@ -18,7 +18,7 @@ const projects = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 1 }}
-            className="text-4xl leading-none md:text-9xl font-bold"
+            className="text-4xl leading-none md:text-7xl font-bold"
           >
             SELECTED WORK <br />
             (2021 - 2023)
@@ -28,7 +28,7 @@ const projects = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-2xl md:text-5xl leading-none font-medium"
+            className="text-2xl md:text-4xl leading-none font-medium"
           >
             Preview some of the Web2.0
             <br />
