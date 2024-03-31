@@ -1,7 +1,6 @@
 "use client";
 
 import Wrapper from "@/components/Wrapper";
-import anime from "../../assets/imgs/anime-log-new.jpeg";
 import { works } from "../projects/constants";
 import React from "react";
 import { motion } from "framer-motion";
@@ -21,7 +20,7 @@ const projects = () => {
             className="text-4xl leading-none md:text-7xl font-bold"
           >
             SELECTED WORK <br />
-            (2021 - 2023)
+            (2021 - 2024)
           </motion.div>
           <motion.div
             initial={{ opacity: 0 }}

@@ -52,7 +52,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.2 }}
             className="text-2xl md:text-4xl leading-none font-medium"
           >
-            Crafting User Interfaces & Transforming Web Landscapes. I help
+            Building things that matter. I help
             companies around the world bring their vision to life with
             captivating visuals.
           </motion.div>

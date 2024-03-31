@@ -1,7 +1,7 @@
 "use client";
 
 import Wrapper from "@/components/Wrapper";
-import hero from "../../assets/imgs/kolawole-hero.png";
+import hero from "../../assets/imgs/new-kolawole.jpg";
 import { services } from "../about/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -36,6 +36,8 @@ const about = () => {
             Enter my domain, where I embrace the realms of emerging web
             technologies. Discover my services, approach, and what captivates
             me.
+            <br />
+            ~ Building things that matter ~
           </motion.div>
         </div>
 
