@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <div className="mt-10 mx-10 md:mx-20 text-xl font-semibold font-inter">
       <div className="text-4xl text-center md:text-left leading-none md:text-7xl font-bold">
-        KOLAWOLE AYOOLA <br />
-        WEB ENGINEER
+        KOLAWOLE JOSHUA <br />
+        WEB DEVELOPER
       </div>
       <div className="grid grid-cold-1 text-center md:grid-cols-3 mt-10 mb-20 items-center gap-5">
         <div className="flex justify-center md:justify-normal gap-5">
@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
 
         <div className="md:text-right">
-          <div className="text-2xl font-medium cursor-pointer relative inline-block group">
+          <div className="text-xl font-medium cursor-pointer relative inline-block group">
             <div>KJ®</div>
           </div>
         </div>

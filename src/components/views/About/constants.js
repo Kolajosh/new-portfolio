@@ -1,7 +1,7 @@
 export const services = [
   {
     name: "Web Design",
-    desc: "Specialize in crafting visually appealing and user-friendly websites tailored to your unique brand and goals. Our services include",
+    desc: "Specialize in crafting visually appealing and user-friendly websites tailored to your unique brand and goals.",
   },
   {
     name: "UI Design",

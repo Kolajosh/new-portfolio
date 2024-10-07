@@ -1,7 +1,8 @@
-import anime from "../../assets/imgs/anime-log-new.jpeg";
-import ikeja from "../../assets/imgs/ikejatech-new.jpeg";
-import coverjobs from "../../assets/imgs/coverjobs-new.jpeg";
-import entater from "../../assets/imgs/entater-new.jpeg";
+import anime from "@/assets/imgs/anime-log-new.jpeg";
+import ikeja from "@/assets/imgs/ikejatech-new.jpeg";
+import lendsqr from "@/assets/imgs/lendsqr.jpeg";
+import coverjobs from "@/assets/imgs/coverjobs-new.jpeg";
+import entater from "@/assets/imgs/entater-new.jpeg";
 
 export const works = [
   {
@@ -21,6 +22,12 @@ export const works = [
     desc: "An online shopping platform where you can shop for gadgets",
     img: ikeja,
     url: "https://ikeja.tech/",
+  },
+  {
+    name: "Lendsqr Lending Dashboard",
+    desc: "A dashboard showing customer details",
+    img: lendsqr,
+    url: "https://lendsqrdashb.vercel.app/",
   },
   {
     name: "EntertaBlock",
