@@ -10,7 +10,7 @@ const Navbar = () => {
       <div className="font-semibold  text-xl  ">
         <Link className="flex items-center gap-3" href="/">
           <Image src={Logo} width={50} alt="logo" />
-          <span className="hidden md:block">Kolawole J ®</span>
+          <span className="hidden md:block">Kolawole J</span>
         </Link>
       </div>
       <div className="">

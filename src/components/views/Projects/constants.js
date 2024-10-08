@@ -3,6 +3,7 @@ import ikeja from "@/assets/imgs/ikejatech-new.jpeg";
 import lendsqr from "@/assets/imgs/lendsqr.jpeg";
 import coverjobs from "@/assets/imgs/coverjobs-new.jpeg";
 import entater from "@/assets/imgs/entater-new.jpeg";
+import chrisason from "@/assets/imgs/chrisason.jpeg";
 
 export const works = [
   {
@@ -10,6 +11,12 @@ export const works = [
     desc: "Simplifies cover letter writing, creating tailored, professional letters in seconds",
     img: coverjobs,
     url: "https://coverjobs.vercel.app",
+  },
+  {
+    name: "Chrisason Fire",
+    desc: "A website for a Fire Protection Engineering company",
+    img: chrisason,
+    url: "https://www.chrisasonfire.com/",
   },
   {
     name: "Anime Library",

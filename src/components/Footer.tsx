@@ -40,6 +40,16 @@ const Footer = () => {
             </Link>
             <span className="absolute bottom-0 left-0 w-full h-[0.50px] bg-black transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"></span>
           </div>
+          <div className="text-xl font-normal cursor-pointer relative inline-block group">
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href="https://medium.com/@kjosh344"
+            >
+              Medium
+            </Link>
+            <span className="absolute bottom-0 left-0 w-full h-[0.50px] bg-black transform origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100"></span>
+          </div>
         </div>
 
         <div>
