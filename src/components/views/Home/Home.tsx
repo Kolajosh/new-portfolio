@@ -1,136 +1,234 @@
 "use client";
-import React, { useEffect, useState } from "react";
+
+import React from "react";
 import { motion } from "framer-motion";
 import Wrapper from "@/components/Wrapper";
-import { works } from "@/components/views/Projects/constants";
+import FolderCard from "@/components/ui/FolderCard";
 import Image from "next/image";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 
+import portraitImg from "@/assets/imgs/me-cutout-color.png";
+import coverjobsImg from "@/assets/imgs/coverjobs-new.jpeg";
+import lendsqrImg from "@/assets/imgs/lendsqr.jpeg";
+import animeImg from "@/assets/imgs/anime-log-new.jpeg";
+
 const Home = () => {
-  const [randomItem, setRandomItem] = useState<{
-    name: String;
-    desc: String;
-    url: any;
-    img: any;
-  }>({
-    name: "",
-    desc: "",
-    url: "",
-    img: "",
-  });
-
-  useEffect(() => {
-    // Generate a random index between 0 and 3 (assuming you have 4 items)
-    const randomIndex = Math.floor(Math.random() * works?.length);
-
-    // Set the random item to display
-    setRandomItem(works[randomIndex]);
-  }, [works]);
-
   return (
     <>
       <Analytics />
       <Wrapper>
-        <div className="my-10 mx-10 md:mx-20 space-y-10 font-inter">
-          <motion.div
-            className="text-4xl leading-none md:text-7xl font-bold"
-            initial={{ opacity: 0, y: 50 }}
+        <div className="flex-1 flex flex-col items-center justify-between px-6 pt-6 sm:pt-10 pb-6">
+          {/* Bio & Contact Section */}
+          <motion.section
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            className="max-w-[740px] mx-auto text-center"
           >
-            KOLAWOLE JOSHUA <br />
-            WEB DEVELOPER
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="text-2xl md:text-4xl leading-none font-medium"
-          >
-            Building things that matter, I help brands worldwide elevate their
-            digital presence.
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 0 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-            <button className="relative font-medium py-5 px-10 border-black border rounded-full text-xl overflow-hidden group">
-              kjosh344@gmail.com
-              <span className="absolute bottom-0 left-0 w-full flex flex-col justify-center h-full bg-black text-white text-center transition-all duration-500 transform translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
-                <Link
-                  target="_blank"
-                  rel="noreferrer"
-                  href="mailto:kjosh344@gmail.com"
-                >
-                  Let's Connect
-                </Link>
+            <h1 className="text-[18px] sm:text-[20px] font-semibold tracking-tight mb-3.5">
+              Hi, I’m Kolawole{" "}
+              <span className="inline-block origin-bottom-right hover:rotate-12 transition-transform">
+                👋🏼
               </span>
-            </button>
-          </motion.div>
-        </div>
+            </h1>
 
-        <motion.div
-          initial={{ opacity: 0, y: 0 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="mb-20 mt-20 mx-10 md:mx-20"
-        >
-          <div className="text-xl my-10 leading-none font-medium">
-            (SELECTED WORK)
-          </div>
-          {/* works */}
-          <div className="mb-20">
-            <div className="w-full relative">
-              <Image
-                className="object-cover h-[500px] rounded-xl w-full"
-                src={randomItem?.img}
-                alt="hero"
-              />
-              <div className="absolute inset-0 flex flex-col gap-5 items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-60 text-white rounded-xl">
-                <div className="text-2xl px-5 md:text-6xl font-bold">
-                  {randomItem?.name}
+            <p
+              className="text-[14px] sm:text-[15px] leading-[1.75] font-normal"
+              style={{ color: "var(--app-text-secondary)" }}
+            >
+              Senior Frontend Software Engineer with over 5 years of end-to-end
+              experience in digital products, spanning SaaS, fintech, and Web3
+              applications. Previously, I was a Frontend Engineer at{" "}
+              <Link
+                href="/experience"
+                className="underline underline-offset-4 decoration-current/40 hover:decoration-current transition-colors"
+                style={{ color: "var(--app-text)" }}
+              >
+                Moniepoint MFB
+              </Link>{" "}
+              and worked at{" "}
+              <Link
+                href="/experience"
+                className="underline underline-offset-4 decoration-current/40 hover:decoration-current transition-colors"
+                style={{ color: "var(--app-text)" }}
+              >
+                ALAT (Wema Bank)
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/experience"
+                className="underline underline-offset-4 decoration-current/40 hover:decoration-current transition-colors"
+                style={{ color: "var(--app-text)" }}
+              >
+                Andela
+              </Link>
+              .
+            </p>
+
+            <p
+              className="mt-6 text-[14px] sm:text-[15px]"
+              style={{ color: "var(--app-text-secondary)" }}
+            >
+              Feel free to reach out to me through any of the channels below.
+            </p>
+
+            <div className="mt-2.5 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[14px] font-medium">
+              <a
+                href="mailto:kjosh344@gmail.com"
+                className="underline underline-offset-4 decoration-current/50 hover:decoration-current transition-opacity hover:opacity-80"
+              >
+                Email
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kolawole-ayoola-264118186/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 decoration-current/50 hover:decoration-current transition-opacity hover:opacity-80"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://twitter.com/josh_kolawole"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 decoration-current/50 hover:decoration-current transition-opacity hover:opacity-80"
+              >
+                X (Twitter)
+              </a>
+              <a
+                href="https://github.com/Kolajosh"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 decoration-current/50 hover:decoration-current transition-opacity hover:opacity-80"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://medium.com/@kjosh344"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 decoration-current/50 hover:decoration-current transition-opacity hover:opacity-80"
+              >
+                Medium
+              </a>
+            </div>
+          </motion.section>
+
+          {/* 3 Interactive Folders (Case Studies removed) */}
+          <motion.section
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
+            aria-label="Portfolio sections"
+            className="mt-9 sm:mt-10 flex flex-wrap items-center justify-center gap-6 sm:gap-7"
+          >
+            {/* 1. Selected Work Folder */}
+            <FolderCard href="/projects" label="Selected Work">
+              <div className="relative w-18 h-12">
+                <div className="absolute left-0.5 bottom-1.5 w-8 h-6.5 rounded-sm overflow-hidden bg-white p-0.5 shadow-xs -rotate-12 transition-transform duration-300 group-hover:-translate-y-2 group-hover:-rotate-16">
+                  <Image
+                    src={lendsqrImg}
+                    alt=""
+                    fill
+                    sizes="36px"
+                    className="object-cover rounded-[2px]"
+                  />
                 </div>
-                <div className="text-lg px-5 md:text-xl font-normal">
-                  {randomItem?.desc}
+                <div className="absolute left-5 bottom-2 w-8 h-7.5 rounded-sm overflow-hidden bg-white p-0.5 shadow-sm z-10 transition-transform duration-300 group-hover:-translate-y-2.5">
+                  <Image
+                    src={coverjobsImg}
+                    alt=""
+                    fill
+                    sizes="36px"
+                    className="object-cover rounded-[2px]"
+                  />
                 </div>
-                <div className="px-5 py-3 rounded-full border border-white">
-                  <Link target="_blank" rel="noreferrer" href={randomItem?.url}>
-                    Visit
-                  </Link>
+                <div className="absolute right-0.5 bottom-1.5 w-8 h-6.5 rounded-sm overflow-hidden bg-white p-0.5 shadow-xs rotate-12 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-16">
+                  <Image
+                    src={animeImg}
+                    alt=""
+                    fill
+                    sizes="36px"
+                    className="object-cover rounded-[2px]"
+                  />
                 </div>
               </div>
-            </div>
-          </div>
-        </motion.div>
+            </FolderCard>
 
-        <div className="mb-20 mt-20 mx-10 md:mx-20">
-          <div className="items-center font-inter space-y-10">
-            <div className="text-[#000000] font-medium text-2xl md:text-4xl">
-              Ready to enhance your business with exceptional digital design?
-              Feel free to reach out and initiate a discussion about your
-              digital design requirements
+            {/* 2. Experience Folder */}
+            <FolderCard href="/experience" label="Experience">
+              <div className="relative w-18 h-12">
+                <div className="absolute left-1 bottom-1.5 w-6.5 h-6.5 rounded-full bg-white shadow-xs flex items-center justify-center -rotate-12 transition-transform duration-300 group-hover:-translate-y-2 group-hover:-rotate-16 border border-black/5">
+                  <span className="w-5 h-5 rounded-full bg-[#0357EE] text-white text-[8px] font-bold flex items-center justify-center">
+                    M
+                  </span>
+                </div>
+                <div className="absolute left-5.5 bottom-2 w-7 h-7 rounded-full bg-white shadow-sm z-10 flex items-center justify-center transition-transform duration-300 group-hover:-translate-y-2.5 border border-black/5">
+                  <span className="w-5.5 h-5.5 rounded-full bg-gradient-to-br from-[#AE1B73] to-[#E1261C] text-white text-[8px] font-bold flex items-center justify-center">
+                    AL
+                  </span>
+                </div>
+                <div className="absolute right-1 bottom-1.5 w-6.5 h-6.5 rounded-full bg-white shadow-xs flex items-center justify-center rotate-12 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-16 border border-black/5">
+                  <span className="w-5 h-5 rounded-full bg-[#10B981] text-white text-[8px] font-bold flex items-center justify-center">
+                    A
+                  </span>
+                </div>
+              </div>
+            </FolderCard>
+
+            {/* 3. About Me Folder */}
+            <FolderCard href="/about" label="About Me">
+              <div className="relative w-18 h-12">
+                <div className="absolute left-1 bottom-1.5 w-7 h-8.5 rounded-sm overflow-hidden bg-white shadow-xs p-0.5 -rotate-10 transition-transform duration-300 group-hover:-translate-y-2 group-hover:-rotate-14 border border-black/5">
+                  <Image
+                    src="/covers/the-golden-compass.jpg"
+                    alt=""
+                    fill
+                    sizes="32px"
+                    className="object-cover rounded-[2px]"
+                  />
+                </div>
+                <div className="absolute left-5.5 bottom-2 w-7 h-9 rounded-sm overflow-hidden bg-white shadow-sm z-10 p-0.5 transition-transform duration-300 group-hover:-translate-y-2.5 border border-black/5">
+                  <Image
+                    src="/covers/vinland-saga.jpg"
+                    alt=""
+                    fill
+                    sizes="32px"
+                    className="object-cover rounded-[2px]"
+                  />
+                </div>
+                <div className="absolute right-1 bottom-1.5 w-7 h-8.5 rounded-sm overflow-hidden bg-white shadow-xs p-0.5 rotate-10 transition-transform duration-300 group-hover:-translate-y-2 group-hover:rotate-14 border border-black/5">
+                  <Image
+                    src="/covers/severance.jpg"
+                    alt=""
+                    fill
+                    sizes="32px"
+                    className="object-cover rounded-[2px]"
+                  />
+                </div>
+              </div>
+            </FolderCard>
+          </motion.section>
+
+          {/* Bottom Monochrome Portrait with Soft Fade */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            className="mt-10 sm:mt-12 flex justify-center w-full"
+          >
+            <div className="relative w-72 sm:w-[380px] aspect-[1024/800] overflow-hidden portrait-fade select-none pointer-events-none">
+              <Image
+                src={portraitImg}
+                alt="Kolawole Ayoola"
+                fill
+                sizes="(max-width: 640px) 288px, 380px"
+                className="object-cover object-bottom"
+                priority
+              />
             </div>
-            <div>
-              <button className="relative font-medium py-5 px-10 border-black border rounded-full text-xl overflow-hidden group">
-                kjosh344@gmail.com
-                <span className="absolute bottom-0 left-0 w-full flex flex-col justify-center h-full bg-black text-white text-center transition-all duration-500 transform translate-y-full opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
-                  <Link
-                    target="_blank"
-                    rel="noreferrer"
-                    href="mailto:kjosh344@gmail.com"
-                  >
-                    Let's Connect
-                  </Link>
-                </span>
-              </button>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </Wrapper>
     </>
